@@ -1,0 +1,42 @@
+{
+  "name": "steamid-finder",
+  "version": "1.0.0",
+  "description": "Refactor of HerrEurobeat/node-steamid-resolver",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier --check **/*.js",
+    "prettier:fix": "prettier --write **/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faceit-helpers/steamid-finder.git"
+  },
+  "keywords": [
+    "Steamid",
+    "finder"
+  ],
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-security": "^1.4.0",
+    "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "xml2js": "^0.4.23"
+  },
+  "author": {
+    "name": "Demian <QGisK>",
+    "email": "devaccdemiann@gmail.com",
+    "url": "https://demiann.dev"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/faceit-helpers/steamid-finder/issues"
+  },
+  "homepage": "https://github.com/faceit-helpers/steamid-finder#readme"
+}
