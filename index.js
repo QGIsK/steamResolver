@@ -1,11 +1,13 @@
-// Initial credit https://github.com/HerrEurobeat/node-steamid-resolver
+// Initial credit https://github/HerrEurobeat/node-steamid-resolver
 
 const https = require('https');
 const xml2js = require('xml2js');
 
+const steamBase = 'https://steamcommunity.com';
+
 /**
  * Internal function to get the XML information of a user or group
- * @param {String} url Full URL of the user or group to steamcommunity.com
+ * @param {String} url Full URL of the user or group to steamcommunity
  * @returns {Promise} Promise object of the user's or group's full information or an error with description
  */
 function getXMLinfo(url) {
@@ -55,7 +57,7 @@ function getXMLinfo(url) {
  * @returns {String} The processed parameter
  */
 function processParameter(param) {
-  if (param.includes('steamcommunity.com/')) {
+  if (param.includes('steamcommunity/')) {
     // check if full url was provided
     const split = param.split('/');
 
@@ -73,7 +75,7 @@ function processParameter(param) {
 module.exports.steamID64ToCustomUrl = (steamID64) => {
   steamID64 = processParameter(steamID64);
 
-  return getXMLinfo(`https://steamcommunity.com/profiles/${steamID64}`)
+  return getXMLinfo(`${steamBase}/profiles/${steamID64}`)
     .then((res) => {
       return res.customURL[0];
     })
@@ -90,7 +92,7 @@ module.exports.steamID64ToCustomUrl = (steamID64) => {
 module.exports.customUrlTosteamID64 = (customID) => {
   customID = processParameter(customID);
 
-  return getXMLinfo(`https://steamcommunity.com/id/${customID}`)
+  return getXMLinfo(`${steamBase}/id/${customID}`)
     .then((res) => {
       return res.steamID64[0];
     })
@@ -107,7 +109,7 @@ module.exports.customUrlTosteamID64 = (customID) => {
 module.exports.steamID64ToFullInfo = (steamID64) => {
   steamID64 = processParameter(steamID64);
 
-  return getXMLinfo(`https://steamcommunity.com/profiles/${steamID64}`)
+  return getXMLinfo(`${steamBase}/profiles/${steamID64}`)
     .then((res) => {
       return res;
     })
@@ -124,7 +126,7 @@ module.exports.steamID64ToFullInfo = (steamID64) => {
 module.exports.customUrlToFullInfo = (customID) => {
   customID = processParameter(customID);
 
-  return getXMLinfo(`https://steamcommunity.com/id/${customID}`)
+  return getXMLinfo(`${steamBase}/id/${customID}`)
     .then((res) => {
       return res;
     })
@@ -141,7 +143,7 @@ module.exports.customUrlToFullInfo = (customID) => {
 module.exports.groupUrlToGroupID64 = (groupURL) => {
   groupURL = processParameter(groupURL);
 
-  return getXMLinfo(`https://steamcommunity.com/groups/${groupURL}/memberslistxml`)
+  return getXMLinfo(`${steamBase}/groups/${groupURL}/memberslistxml`)
     .then((res) => {
       return res.groupID64[0];
     })
@@ -158,7 +160,7 @@ module.exports.groupUrlToGroupID64 = (groupURL) => {
 module.exports.groupUrlToFullInfo = (groupURL) => {
   groupURL = processParameter(groupURL);
 
-  return getXMLinfo(`https://steamcommunity.com/groups/${groupURL}/memberslistxml`)
+  return getXMLinfo(`${steamBase}/groups/${groupURL}/memberslistxml`)
     .then((res) => {
       return res;
     })
