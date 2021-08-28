@@ -57,11 +57,13 @@ function getXMLinfo(url) {
  * @returns {String} The processed parameter
  */
 function processParameter(param) {
-  if (param.includes('steamcommunity/')) {
+  if (param.includes('steamcommunity.com/')) {
     // check if full url was provided
     const split = param.split('/');
 
-    return split[split.length - 1];
+    const index = param.endsWith('/') ? 2 : 1;
+
+    return split[split.length - index];
   }
   // if the user already provided only the important part then just return the parameter again
   return param;
