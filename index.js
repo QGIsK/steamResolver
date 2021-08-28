@@ -72,7 +72,7 @@ function processParameter(param) {
  * @param {String} steamID64 steamID64 or full URL of the user
  * @param {function} [callback] Called with `err` (String) and `customURL` (String) parameters on completion
  */
-module.exports.steamID64ToCustomUrl = (steamID64) => {
+module.exports.toCustomURL = (steamID64) => {
   steamID64 = processParameter(steamID64);
 
   return getXMLinfo(`${steamBase}/profiles/${steamID64}`)
@@ -89,7 +89,7 @@ module.exports.steamID64ToCustomUrl = (steamID64) => {
  * @param {String} customID Custom ID or full URL of the user as String
  * @param {function} [callback] Called with `err` (String) and `steamID64` (String) parameters on completion
  */
-module.exports.customUrlTosteamID64 = (customID) => {
+module.exports.fromCustomURL = (customID) => {
   customID = processParameter(customID);
 
   return getXMLinfo(`${steamBase}/id/${customID}`)
@@ -106,7 +106,7 @@ module.exports.customUrlTosteamID64 = (customID) => {
  * @param {String} steamID64 steamID64 or full URL of the user as String
  * @param {function} [callback] Called with `err` (String) and `info` (Object) parameters on completion
  */
-module.exports.steamID64ToFullInfo = (steamID64) => {
+module.exports.from64ToFull = (steamID64) => {
   steamID64 = processParameter(steamID64);
 
   return getXMLinfo(`${steamBase}/profiles/${steamID64}`)
@@ -123,7 +123,7 @@ module.exports.steamID64ToFullInfo = (steamID64) => {
  * @param {String} customID Custom ID or full URL of the user as String
  * @param {function} [callback] Called with `err` (String) and `info` (Object) parameters on completion
  */
-module.exports.customUrlToFullInfo = (customID) => {
+module.exports.fromCustomToFull = (customID) => {
   customID = processParameter(customID);
 
   return getXMLinfo(`${steamBase}/id/${customID}`)
@@ -140,7 +140,7 @@ module.exports.customUrlToFullInfo = (customID) => {
  * @param {String} groupURL Custom Name of the group or full URL as String
  * @param @param {function} [callback] Called with `err` (String) and `groupID64` (String) parameters on completion
  */
-module.exports.groupUrlToGroupID64 = (groupURL) => {
+module.exports.fromGroupUrlToID = (groupURL) => {
   groupURL = processParameter(groupURL);
 
   return getXMLinfo(`${steamBase}/groups/${groupURL}/memberslistxml`)
@@ -157,7 +157,7 @@ module.exports.groupUrlToGroupID64 = (groupURL) => {
  * @param {String} groupURL Custom Name of the group or full URL as String
  * @param {function} [callback] Called with `err` (String) and `info` (Object) parameters on completion
  */
-module.exports.groupUrlToFullInfo = (groupURL) => {
+module.exports.fromGroupUrlToFull = (groupURL) => {
   groupURL = processParameter(groupURL);
 
   return getXMLinfo(`${steamBase}/groups/${groupURL}/memberslistxml`)
