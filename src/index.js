@@ -54,8 +54,8 @@ class SteamResolver {
    * @param {String} steamID
    * @returns {String}
    */
-  async from64ToFull(customURL) {
-    const formattedID = Utils.parseParams(customURL);
+  async from64ToFull(steamID) {
+    const formattedID = Utils.parseParams(steamID);
 
     const url = `${Constants.BaseURL}/profiles/${formattedID}`;
 
@@ -86,8 +86,8 @@ class SteamResolver {
    * @param {String} groupURL
    * @returns {String}
    */
-  async fromGroupURLToID(customURL) {
-    const formattedID = Utils.parseParams(customURL);
+  async fromGroupURLToID(groupURL) {
+    const formattedID = Utils.parseParams(groupURL);
 
     const url = `${Constants.BaseURL}/groups/${formattedID}/memberslistxml`;
 
@@ -102,8 +102,8 @@ class SteamResolver {
    * @param {String} groupURL
    * @returns {Promise}
    */
-  async fromGroupUrlToFull(customURL) {
-    const formattedID = Utils.parseParams(customURL);
+  async fromGroupUrlToFull(groupURL) {
+    const formattedID = Utils.parseParams(groupURL);
 
     const url = `${Constants.BaseURL}/groups/${formattedID}/memberslistxml`;
 

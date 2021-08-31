@@ -94,9 +94,8 @@ const parseXML = (data) =>
   new xmlParser.Parser()
     .parseStringPromise(data)
     .then((parsed) => {
-      if (parsed.profile || parsed.memberList) {
-        return parsed.profile || parsed.memberList;
-      }
+      if (parsed.profile) return parsed.profile;
+      if (parsed.memberList) return parsed.memberList;
 
       return _WARN_('Not found', 'Resource cannot be found.');
     })

@@ -1,11 +1,81 @@
+const test = require('ava');
+
 const ResolveSteam = require('.');
+const Utils = require('./src/helpers/utils');
 
-const client = new ResolveSteam();
+// These are my steam id and custom url, They will not be changed.
+const SteamID = '76561198250920834';
+const SteamCustomID = 'Demiann';
+const SteamCustomURL = 'https://steamcommunity.com/id/Demiann';
 
-const get = async () => {
-  const id = await client.fromCustomURL('https://steamcommunity.com/id/Demiann');
+// Random group
+const SteamGroupID = '103582791463600727';
+const SteamGroupCustomURL = 'https://steamcommunity.com/groups/ROBOTAIM';
 
-  console.log(id);
-};
+test('toCustomURL Returns Custom URL', async (t) => {
+  const Resolve = new ResolveSteam();
 
-get();
+  const res = await Resolve.toCustomURL(SteamID);
+
+  t.is(res, SteamCustomID);
+});
+
+test('fromCustomURL Returns SteamID64', async (t) => {
+  const Resolve = new ResolveSteam();
+
+  const res = await Resolve.fromCustomURL(SteamCustomID);
+
+  t.is(res, SteamID);
+});
+
+test('from64ToFull Returns Object with user information', async (t) => {
+  const Resolve = new ResolveSteam();
+
+  const res = await Resolve.from64ToFull(SteamID);
+
+  // Check a few values
+  t.assert('steamID64' in res);
+  t.assert('steamID' in res);
+  t.assert('onlineState' in res);
+  t.assert('stateMessage' in res);
+  t.is(res.steamID64[0], SteamID);
+});
+
+test('fromCustomToFull Returns Object with user information', async (t) => {
+  const Resolve = new ResolveSteam();
+
+  const res = await Resolve.fromCustomToFull(SteamCustomID);
+
+  // Check a few values
+  t.assert('steamID64' in res);
+  t.assert('steamID' in res);
+  t.assert('onlineState' in res);
+  t.assert('stateMessage' in res);
+  t.is(res.steamID64[0], SteamID);
+});
+
+test('fromGroupURLToID Returns steam group id', async (t) => {
+  const Resolve = new ResolveSteam();
+
+  const res = await Resolve.fromGroupURLToID(SteamGroupCustomURL);
+
+  t.is(res, SteamGroupID);
+});
+
+test('fromGroupUrlToFull Returns Object with group information', async (t) => {
+  const Resolve = new ResolveSteam();
+
+  const res = await Resolve.fromGroupUrlToFull(SteamGroupCustomURL);
+
+  // Check a few values
+  t.assert('groupID64' in res);
+  t.assert('groupName' in res.groupDetails[0]);
+  t.assert('groupURL' in res.groupDetails[0]);
+  t.is(res.groupID64[0], SteamGroupID);
+});
+
+test('Parse params only returns the custom url', async (t) => {
+  const res = Utils.parseParams(SteamCustomURL);
+
+  t.is(res, SteamCustomID);
+});
