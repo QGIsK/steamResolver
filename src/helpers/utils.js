@@ -74,22 +74,6 @@ const doesInclude = (string, includes) => {
   return String(string).includes(includes);
 };
 
-/**
- * @description Internal helper to emit a warning to the console
- * @function _WARN_
- * @param {string} title
- * @param {string} detail
- * @returns {boolean}
- */
-const _WARN_ = (title = '', detail = '') => {
-  process.emitWarning(title, {
-    detail,
-    code: 'SteamResolver',
-  });
-
-  return true;
-};
-
 const parseXML = (data) =>
   new xmlParser.Parser()
     .parseStringPromise(data)
@@ -97,9 +81,9 @@ const parseXML = (data) =>
       if (parsed.profile) return parsed.profile;
       if (parsed.memberList) return parsed.memberList;
 
-      return _WARN_('Not found', 'Resource cannot be found.');
+      return new Error('Resource cannot be found.');
     })
-    .catch((e) => _WARN_('Error', `Error parsing data xml: ${e}`));
+    .catch((e) => new Error(`Error parsing data xml: ${e}`));
 
 const parseParams = (param) => {
   if (param.includes('steamcommunity.com/')) {
@@ -122,7 +106,6 @@ module.exports = {
   isNumber,
   isArray,
   doesInclude,
-  _WARN_,
   parseXML,
   parseParams,
 };

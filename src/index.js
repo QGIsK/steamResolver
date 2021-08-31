@@ -123,12 +123,12 @@ class SteamResolver {
       .then((output) => {
         if (!Utils.doesInclude(output, '<?xml') && Utils.doesInclude(output, '<error>')) {
           // Check if output is steam group xml data before parsing it in order to provide correct group not found message
-          Utils._WARN_('Not found', 'Resource cannot be found.');
+          return new Error('Resource cannot be found');
         }
 
         return Utils.parseXML(output);
       })
-      .catch((e) => Utils._WARN_('Error', `Error trying to reach Steam: ${e}`));
+      .catch((e) => new Error(`Error trying to reach Steam: ${e}`));
   }
 }
 
