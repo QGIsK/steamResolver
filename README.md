@@ -114,6 +114,7 @@ const res = await Resolve.fromGroupUrlToFull('https://steamcommunity.com/groups/
 ## • Inspiration
 
 [miscavage/CoinGecko-API](https://github.com/miscavage/CoinGecko-API/)
+
 [HerrEuroBeat/node-steamid-resolver](https://github.com/HerrEurobeat/node-steamid-resolver/)
 
 ## • License
