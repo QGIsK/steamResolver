@@ -1,7 +1,9 @@
-const resolveSteam = require('.');
+const ResolveSteam = require('.');
+
+const client = new ResolveSteam();
 
 const get = async () => {
-  const id = await resolveSteam.fromCustomURL('https://steamcommunity.com/id/Demiann');
+  const id = await client.fromCustomURL('https://steamcommunity.com/id/Demiann');
 
   console.log(id);
 };
