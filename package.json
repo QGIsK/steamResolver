@@ -1,5 +1,5 @@
 {
-  "name": "@faceit-helpers/steamresolver",
+  "name": "@qgisk/steamresolver",
   "version": "1.0.1",
   "description": "Steam ID Lookup from custom urls and the other way around",
   "main": "index.js",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/faceit-helpers/steamResolver.git"
+    "url": "git+https://github.com/QGIsK/steamResolver.git"
   },
   "keywords": [
     "customurl",
@@ -50,7 +50,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/faceit-helpers/steamResolver/issues"
+    "url": "https://github.com/QGIsK/steamResolver/issues"
   },
-  "homepage": "https://github.com/faceit-helpers/steamResolver#readme"
+  "homepage": "https://github.com/QGIsK/steamResolver#readme"
 }

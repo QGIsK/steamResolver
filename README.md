@@ -1,8 +1,8 @@
 # Steam ID Resolver for NodeJS
 
-<span class="badge-npmversion"><a href="https://www.npmjs.com/package/@faceit-helpers/steamResolver" title="View this project on NPM"><img src="https://img.shields.io/npm/v/@faceit-helpers/steamResolver.svg" alt="NPM version"/></a></span>
-<span class="badge-npmdownloads"><a href="https://npmjs.org/package/@faceit-helpers/steamResolver" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/@faceit-helpers/steamResolver.svg" alt="NPM downloads" /></a></span>
-[![Test package](https://github.com/faceit-helpers/steamResolver/actions/workflows/test.js.yml/badge.svg?branch=main)](https://github.com/faceit-helpers/steamResolver/actions/workflows/test.js.yml)
+<span class="badge-npmversion"><a href="https://www.npmjs.com/package/@QGIsK/steamResolver" title="View this project on NPM"><img src="https://img.shields.io/npm/v/@QGIsK/steamResolver.svg" alt="NPM version"/></a></span>
+<span class="badge-npmdownloads"><a href="https://npmjs.org/package/@QGIsK/steamResolver" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/@QGIsK/steamResolver.svg" alt="NPM downloads" /></a></span>
+[![Test package](https://github.com/QGIsK/steamResolver/actions/workflows/test.js.yml/badge.svg?branch=main)](https://github.com/QGIsK/steamResolver/actions/workflows/test.js.yml)
 
 A NodeJS SteamResolver with only two dependencies [isomorphic-unfetch](https://www.npmjs.com/package/isomorphic-unfetch) and [xml2js](https://www.npmjs.com/package/xml2js).
 
@@ -13,7 +13,7 @@ This package converts custom steam urls into ids and the other way around, Also 
 ## • Installation
 
 ```bash
-npm i @faceit-helpers/steamResolver
+npm i @QGIsK/steamResolver
 ```
 
 ## • Constants
@@ -28,7 +28,7 @@ This module provides helper constants for use in calls.
 
 ```javascript
 // Import the wrapper library
-const SteamResolver = require('@faceit-helpers/steamResolver');
+const SteamResolver = require('@QGIsK/steamResolver');
 
 // Initiate the client
 const Resolver = new SteamResolver();

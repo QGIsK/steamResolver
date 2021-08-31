@@ -8,7 +8,7 @@ const Constants = require('./helpers/constants');
  * @author Demian <devaccdemiann@gmail.com>
  * @description A Node.js custom url to id and the other way around resolver for steam
  * @example
- *     const SteamResolver = require('@faceit-helpers/steamResolver');
+ *     const SteamResolver = require('@QGIsK/steamResolver');
  *     const client = new SteamResolver();
  * @public
  * @version 1.0.1
