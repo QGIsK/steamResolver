@@ -13,7 +13,7 @@ This package converts custom steam urls into ids and the other way around, Also 
 ## • Installation
 
 ```bash
-npm i @QGIsK/steamResolver
+npm i @qgisk/steamresolver
 ```
 
 ## • Constants
@@ -28,7 +28,7 @@ This module provides helper constants for use in calls.
 
 ```javascript
 // Import the wrapper library
-const SteamResolver = require('@QGIsK/steamResolver');
+const SteamResolver = require('@qgisk/steamresolver');
 
 // Initiate the client
 const Resolver = new SteamResolver();
