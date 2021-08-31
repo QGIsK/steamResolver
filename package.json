@@ -7,7 +7,7 @@
     "index.js",
     "src/index.js",
     "src/helpers/constants.js",
-    "src/helpers/util.js"
+    "src/helpers/utils.js"
   ],
   "scripts": {
     "test": "ava",
