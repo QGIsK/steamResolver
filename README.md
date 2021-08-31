@@ -2,7 +2,6 @@
 
 <span class="badge-npmversion"><a href="https://www.npmjs.com/package/@faceit-helpers/steamResolver" title="View this project on NPM"><img src="https://img.shields.io/npm/v/@faceit-helpers/steamResolver.svg" alt="NPM version"/></a></span>
 <span class="badge-npmdownloads"><a href="https://npmjs.org/package/@faceit-helpers/steamResolver" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/@faceit-helpers/steamResolver.svg" alt="NPM downloads" /></a></span>
-[![CodeQL](https://github.com/faceit-helpers/steamResolver/actions/workflows/codeql-analysis.yml/badge.svg?branch=main)](https://github.com/faceit-helpers/steamResolver/actions/workflows/codeql-analysis.yml)
 [![Test package](https://github.com/faceit-helpers/steamResolver/actions/workflows/test.js.yml/badge.svg?branch=main)](https://github.com/faceit-helpers/steamResolver/actions/workflows/test.js.yml)
 
 A nodejs SteamResolver with only two dependencies [node-fetch](https://www.npmjs.com/package/node-fetch).
