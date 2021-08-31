@@ -11,7 +11,7 @@ const Constants = require('./helpers/constants');
  *     const SteamResolver = require('@QGIsK/steamResolver');
  *     const client = new SteamResolver();
  * @public
- * @version 1.0.0
+ * @version 1.0.2
  * @license MIT
  */
 class SteamResolver {
