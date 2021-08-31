@@ -1,5 +1,4 @@
 const fetch = require('isomorphic-unfetch');
-// const _ = require('lodash');
 
 const Utils = require('./helpers/utils');
 const Constants = require('./helpers/constants');
