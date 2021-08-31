@@ -4,7 +4,7 @@
 <span class="badge-npmdownloads"><a href="https://npmjs.org/package/@faceit-helpers/steamResolver" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/@faceit-helpers/steamResolver.svg" alt="NPM downloads" /></a></span>
 [![Test package](https://github.com/faceit-helpers/steamResolver/actions/workflows/test.js.yml/badge.svg?branch=main)](https://github.com/faceit-helpers/steamResolver/actions/workflows/test.js.yml)
 
-A nodejs SteamResolver with only two dependencies [node-fetch](https://www.npmjs.com/package/node-fetch).
+A nodejs SteamResolver with only two dependencies [node-fetch](https://www.npmjs.com/package/node-fetch) and [xml2js](https://www.npmjs.com/package/xml2js).
 
 ## • Description
 
