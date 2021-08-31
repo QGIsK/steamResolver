@@ -11,7 +11,7 @@ const Constants = require('./helpers/constants');
  *     const SteamResolver = require('@faceit-helpers/steamResolver');
  *     const client = new SteamResolver();
  * @public
- * @version 1.0.0
+ * @version 1.0.1
  * @license MIT
  */
 class SteamResolver {

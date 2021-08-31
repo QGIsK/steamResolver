@@ -13,7 +13,7 @@ This package converts custom steam urls into ids and the other way around, Also 
 ## • Installation
 
 ```bash
-npm i github:faceit-helpers/steamResolver
+npm i @faceit-helpers/steamResolver
 ```
 
 ## • Constants
