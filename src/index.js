@@ -28,6 +28,8 @@ class SteamResolver {
 
     const res = await this._request(url);
 
+    if (!res.customURL[0]) throw new Error('Custom URL Not found');
+
     return res.customURL[0];
   }
 
@@ -43,6 +45,8 @@ class SteamResolver {
     const url = `${Constants.BaseURL}/id/${formattedID}`;
 
     const res = await this._request(url);
+
+    if (!res.steamID64[0]) throw new Error('steamID64 Not found');
 
     return res.steamID64[0];
   }
@@ -91,6 +95,8 @@ class SteamResolver {
     const url = `${Constants.BaseURL}/groups/${formattedID}/memberslistxml`;
 
     const res = await this._request(url);
+
+    if (!res.groupID64[0]) throw new Error('Group ID Not found');
 
     return res.groupID64[0];
   }
