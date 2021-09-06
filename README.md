@@ -33,7 +33,7 @@ const SteamResolver = require('@qgisk/steamresolver');
 // Initiate the client
 const Resolver = new SteamResolver();
 
-// Create a function that gets a joke
+// Create a function that gets the custom url
 const get = async () => {
   const fromID = await Resolve.toCustomURL('76561198250920834');
   const fromLink = await Resolve.toCustomURL('htts://steamcommunity.com/profiles/76561198250920834');
