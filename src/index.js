@@ -26,11 +26,7 @@ class SteamResolver {
 
     const url = `${Constants.BaseURL}/profiles/${formattedID}`;
 
-    const res = await this._request(url);
-
-    if (!res.customURL[0]) throw new Error('Custom URL Not found');
-
-    return res.customURL[0];
+    return this._request(url, 'customURL');
   }
 
   /**
@@ -44,11 +40,7 @@ class SteamResolver {
 
     const url = `${Constants.BaseURL}/id/${formattedID}`;
 
-    const res = await this._request(url);
-
-    if (!res.steamID64[0]) throw new Error('steamID64 Not found');
-
-    return res.steamID64[0];
+    return this._request(url, 'steamID64');
   }
 
   /**
@@ -62,9 +54,7 @@ class SteamResolver {
 
     const url = `${Constants.BaseURL}/profiles/${formattedID}`;
 
-    const res = await this._request(url);
-
-    return res;
+    return this._request(url);
   }
 
   /**
@@ -78,9 +68,7 @@ class SteamResolver {
 
     const url = `${Constants.BaseURL}/id/${formattedID}`;
 
-    const res = await this._request(url);
-
-    return res;
+    return this._request(url);
   }
 
   /**
@@ -94,11 +82,7 @@ class SteamResolver {
 
     const url = `${Constants.BaseURL}/groups/${formattedID}/memberslistxml`;
 
-    const res = await this._request(url);
-
-    if (!res.groupID64[0]) throw new Error('Group ID Not found');
-
-    return res.groupID64[0];
+    return this._request(url, 'groupID64');
   }
 
   /**
@@ -112,9 +96,7 @@ class SteamResolver {
 
     const url = `${Constants.BaseURL}/groups/${formattedID}/memberslistxml`;
 
-    const res = await this._request(url);
-
-    return res;
+    return this._request(url);
   }
 
   /**
@@ -123,18 +105,26 @@ class SteamResolver {
    * @param {String} url
    * @returns {Promise}
    */
-  async _request(url) {
-    return fetch(`${url}?xml=1`)
-      .then((res) => res.text())
-      .then((output) => {
-        if (!Utils.doesInclude(output, '<?xml') && Utils.doesInclude(output, '<error>')) {
-          // Check if output is steam group xml data before parsing it in order to provide correct group not found message
-          return new Error('Resource cannot be found');
-        }
+  async _request(url, output) {
+    return new Promise((resolve, reject) => {
+      fetch(`${url}?xml=1`)
+        .then((res) => res.text())
+        .then(async (data) => {
+          if (!Utils.doesInclude(data, '<?xml') && Utils.doesInclude(data, '<error>')) {
+            // Check if output is steam group xml data before parsing it in order to provide correct group not found message
+            reject(new Error('Resource cannot be found'));
+          }
 
-        return Utils.parseXML(output);
-      })
-      .catch((e) => new Error(`Error trying to reach Steam: ${e}`));
+          const parsedData = await Utils.parseXML(data);
+
+          if (output) {
+            resolve(parsedData[output][0]);
+          }
+
+          resolve(parsedData);
+        })
+        .catch((e) => reject(e));
+    });
   }
 }
 

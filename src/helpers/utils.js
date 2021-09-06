@@ -83,7 +83,7 @@ const parseXML = (data) =>
 
       return new Error('Resource cannot be found.');
     })
-    .catch((e) => new Error(`Error parsing data xml: ${e}`));
+    .catch((e) => e);
 
 const parseParams = (param) => {
   if (param.includes('steamcommunity.com/')) {
