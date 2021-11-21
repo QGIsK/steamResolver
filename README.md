@@ -15,15 +15,6 @@ This package converts custom steam urls into ids and the other way around, Also 
 ```bash
 npm i @qgisk/steamresolver
 ```
-
-## • Constants
-
-This module provides helper constants for use in calls.
-
-| Key    | Usage                | Description        |
-| ------ | -------------------- | ------------------ |
-| `BASE` | `SteamResolver.BASE` | Base url for steam |
-
 ## • Quick Start Example
 
 ```javascript
@@ -44,72 +35,8 @@ const get = async () => {
 // Execute the function
 get();
 ```
-
-## • From id to custom url
-
-Converts a steamID64 into a custom url
-
-### • Example
-
-```javascript
-const res = await Resolve.toCustomURL('76561198250920834');
-const res = await Resolve.toCustomURL('https://steamcommunity.com/profiles/76561198250920834');
-```
-
-## • From custom url to id
-
-Converts a custom url into a steamID64
-
-### • Example
-
-```javascript
-const res = await Resolve.fromCustomURL('Demiann');
-const res = await Resolve.fromCustomURL('https://steamcommunity.com/id/Demiann');
-```
-
-## • From steamID64 to full information
-
-Converts a steamID64 into a full profile
-
-### • Example
-
-```javascript
-const res = await Resolve.from64ToProfile('76561198250920834');
-const res = await Resolve.from64ToProfile('https://steamcommunity.com/profiles/76561198250920834');
-```
-
-## • From Custom URL to full information
-
-Converts a Custom URL into a full profile
-
-### • Example
-
-```javascript
-const res = await Resolve.fromCustomToProfile('Demiann');
-const res = await Resolve.fromCustomToProfile('https://steamcommunity.com/id/Demiann');
-```
-
-## • From Group url to id
-
-Converts a Goup URL into an id
-
-### • Example
-
-```javascript
-const res = await Resolve.fromGroupURLToID('ROBOTAIM');
-const res = await Resolve.fromGroupURLToID('https://steamcommunity.com/groups/ROBOTAIM');
-```
-
-## • From Group url to Full information
-
-Converts a Goup URL into a full profile
-
-### • Example
-
-```javascript
-const res = await Resolve.fromGroupUrlToProfile('ROBOTAIM');
-const res = await Resolve.fromGroupUrlToProfile('https://steamcommunity.com/groups/ROBOTAIM');
-```
+## • Full documentation
+Full documentation can be found [here](https://steamresolver.docs.demiann.dev)
 
 ## • Inspiration
 
