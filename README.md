@@ -74,8 +74,8 @@ Converts a steamID64 into a full profile
 ### • Example
 
 ```javascript
-const res = await Resolve.from64ToFull('76561198250920834');
-const res = await Resolve.from64ToFull('https://steamcommunity.com/profiles/76561198250920834');
+const res = await Resolve.from64ToProfile('76561198250920834');
+const res = await Resolve.from64ToProfile('https://steamcommunity.com/profiles/76561198250920834');
 ```
 
 ## • From Custom URL to full information
@@ -85,8 +85,8 @@ Converts a Custom URL into a full profile
 ### • Example
 
 ```javascript
-const res = await Resolve.fromCustomToFull('Demiann');
-const res = await Resolve.fromCustomToFull('https://steamcommunity.com/id/Demiann');
+const res = await Resolve.fromCustomToProfile('Demiann');
+const res = await Resolve.fromCustomToProfile('https://steamcommunity.com/id/Demiann');
 ```
 
 ## • From Group url to id
@@ -107,8 +107,8 @@ Converts a Goup URL into a full profile
 ### • Example
 
 ```javascript
-const res = await Resolve.fromGroupUrlToFull('ROBOTAIM');
-const res = await Resolve.fromGroupUrlToFull('https://steamcommunity.com/groups/ROBOTAIM');
+const res = await Resolve.fromGroupUrlToProfile('ROBOTAIM');
+const res = await Resolve.fromGroupUrlToProfile('https://steamcommunity.com/groups/ROBOTAIM');
 ```
 
 ## • Inspiration

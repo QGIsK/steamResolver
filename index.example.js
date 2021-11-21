@@ -17,17 +17,17 @@ const get = async () => {
   //   console.log(groupToID);
   //   console.log(typeof groupToID);
 
-  const customToProfile = await Resolve.fromCustomToFull('Demiann');
+  const customToProfile = await Resolve.fromCustomToProfile('Demiann');
 
   //   console.log(customToProfile);
   //   console.log(typeof customToProfile);
 
-  const groupUrlToProfile = await Resolve.fromGroupUrlToFull('ROBOTAIM');
+  const groupUrlToProfile = await Resolve.fromGroupUrlToProfile('ROBOTAIM');
 
   //   console.log(groupUrlToProfile);
   //   console.log(typeof groupUrlToProfile);
 
-  const idToProfile = await Resolve.from64ToFull('76561198250920834');
+  const idToProfile = await Resolve.from64ToProfile('76561198250920834');
 
   //   console.log(idToProfile);
   //   console.log(typeof idToProfile);

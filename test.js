@@ -28,10 +28,10 @@ test('fromCustomURL Returns SteamID64', async (t) => {
   t.is(res, SteamID);
 });
 
-test('from64ToFull Returns Object with user information', async (t) => {
+test('from64ToProfile Returns Object with user information', async (t) => {
   const Resolve = new ResolveSteam();
 
-  const res = await Resolve.from64ToFull(SteamID);
+  const res = await Resolve.from64ToProfile(SteamID);
 
   // Check a few values
   t.assert('steamID64' in res);
@@ -41,10 +41,10 @@ test('from64ToFull Returns Object with user information', async (t) => {
   t.is(res.steamID64[0], SteamID);
 });
 
-test('fromCustomToFull Returns Object with user information', async (t) => {
+test('fromCustomToProfile Returns Object with user information', async (t) => {
   const Resolve = new ResolveSteam();
 
-  const res = await Resolve.fromCustomToFull(SteamCustomID);
+  const res = await Resolve.fromCustomToProfile(SteamCustomID);
 
   // Check a few values
   t.assert('steamID64' in res);
@@ -62,10 +62,10 @@ test('fromGroupURLToID Returns steam group id', async (t) => {
   t.is(res, SteamGroupID);
 });
 
-test('fromGroupUrlToFull Returns Object with group information', async (t) => {
+test('fromGroupUrlToProfile Returns Object with group information', async (t) => {
   const Resolve = new ResolveSteam();
 
-  const res = await Resolve.fromGroupUrlToFull(SteamGroupCustomURL);
+  const res = await Resolve.fromGroupUrlToProfile(SteamGroupCustomURL);
 
   // Check a few values
   t.assert('groupID64' in res);

@@ -12,8 +12,8 @@ This method returns a steamid from a group url
 Supports just the name or a full link.
 
 ```javascript[index.js]
-await Resolve.fromGroupUrlToFull('ROBOTAIM');
-await Resolve.fromGroupUrlToFull('https://steamcommunity.com/groups/ROBOTAIM');
+await Resolve.fromGroupUrlToProfile('ROBOTAIM');
+await Resolve.fromGroupUrlToProfile('https://steamcommunity.com/groups/ROBOTAIM');
 ```
 
 ## Output

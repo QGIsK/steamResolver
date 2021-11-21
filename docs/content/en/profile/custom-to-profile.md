@@ -12,8 +12,8 @@ This method returns a full profile from a custom url
 Supports just the custom name or a full link.
 
 ```javascript[index.js]
-await Resolve.fromCustomToFull('Demiann');
-await Resolve.fromCustomToFull('https://steamcommunity.com/id/Demiann');
+await Resolve.fromCustomToProfile('Demiann');
+await Resolve.fromCustomToProfile('https://steamcommunity.com/id/Demiann');
 ```
 
 ## Output

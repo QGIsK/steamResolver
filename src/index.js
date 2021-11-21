@@ -45,11 +45,11 @@ class SteamResolver {
 
   /**
    * @description From 64 to full information
-   * @function from64ToFull()
+   * @function from64ToProfile()
    * @param {String} steamID
    * @returns {String}
    */
-  async from64ToFull(steamID) {
+  async from64ToProfile(steamID) {
     const formattedID = Utils.parseParams(steamID);
 
     const url = `${Constants.BaseURL}/profiles/${formattedID}`;
@@ -59,11 +59,11 @@ class SteamResolver {
 
   /**
    * @description From custom to full information
-   * @function fromCustomToFull()
+   * @function fromCustomToProfile()
    * @param {String} customURL
    * @returns {String}
    */
-  async fromCustomToFull(customURL) {
+  async fromCustomToProfile(customURL) {
     const formattedID = Utils.parseParams(customURL);
 
     const url = `${Constants.BaseURL}/id/${formattedID}`;
@@ -73,7 +73,7 @@ class SteamResolver {
 
   /**
    * @description From group custom url to id
-   * @function fromCustomToFull()
+   * @function fromCustomToProfile()
    * @param {String} groupURL
    * @returns {String}
    */
@@ -87,11 +87,11 @@ class SteamResolver {
 
   /**
    * @description From group url to full information
-   * @function fromCustomToFull()
+   * @function fromCustomToProfile()
    * @param {String} groupURL
    * @returns {Promise}
    */
-  async fromGroupUrlToFull(groupURL) {
+  async fromGroupUrlToProfile(groupURL) {
     const formattedID = Utils.parseParams(groupURL);
 
     const url = `${Constants.BaseURL}/groups/${formattedID}/memberslistxml`;
