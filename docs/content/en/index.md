@@ -1,27 +1,40 @@
 ---
 title: Introduction
-description: ''
+description: 'Introduction'
+category: 'Getting Started'
 position: 1
-category: ''
 features:
-  - Feature 1
-  - Feature 2
-  - Feature 3
+  - ID to Custom url
+  - Custom url to ID
+  - ID to Full Profile
+  - Custom url to full Profile
+  - Group url to ID
+  - Group ID to full profile
 ---
 
-<img src="/preview.png" class="light-img" width="1280" height="640" alt=""/>
-<img src="/preview-dark.png" class="dark-img" width="1280" height="640" alt=""/>
-
-[Module]() for [NuxtJS](https://nuxtjs.org).
-
-<alert type="success">
-
-Your documentation has been created successfully!
-
-</alert>
+A NodeJS SteamResolver with only two dependencies [isomorphic-unfetch](https://www.npmjs.com/package/isomorphic-unfetch) and [xml2js](https://www.npmjs.com/package/xml2js).
 
 ## Features
 
 <list :items="features"></list>
 
-<p class="flex items-center">Enjoy light and dark mode:&nbsp;<app-color-switcher class="inline-flex ml-2"></app-color-switcher></p>
+## Simple Example
+
+```javascript[index.js]
+// Import the wrapper library
+const SteamResolver = require('@qgisk/steamresolver');
+
+// Initiate the client
+const Resolve = new SteamResolver();
+
+// Create a function that gets the custom url
+const get = async () => {
+  const fromID = await Resolve.toCustomURL('76561198250920834');
+  const fromLink = await Resolve.toCustomURL('htts://steamcommunity.com/profiles/76561198250920834');
+
+  console.log(fromID, fromLink);
+};
+
+// Execute the function
+get();
+```
