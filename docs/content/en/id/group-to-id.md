@@ -12,6 +12,14 @@ This method returns a steamid from a group url
 Supports just the name or a full link.
 
 ```javascript[index.js]
-await Resolve.fromGroupUrlToFull('ROBOTAIM');
-await Resolve.fromGroupUrlToFull('https://steamcommunity.com/groups/ROBOTAIM');
+await Resolve.fromGroupURLToID('ROBOTAIM');
+await Resolve.fromGroupURLToID('https://steamcommunity.com/groups/ROBOTAIM');
+```
+
+## Output
+
+- type: String
+
+```json
+103582791463600727
 ```

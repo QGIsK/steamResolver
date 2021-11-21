@@ -13,5 +13,42 @@ Supports just the custom name or a full link.
 
 ```javascript[index.js]
 await Resolve.fromCustomToFull('Demiann');
-await await Resolve.fromCustomToFull('https://steamcommunity.com/id/Demiann');
+await Resolve.fromCustomToFull('https://steamcommunity.com/id/Demiann');
+```
+
+## Output
+
+- type: Object
+
+```javascript
+{
+  steamID64: [ '76561198250920834' ],
+  steamID: [ 'Demian' ],
+  onlineState: [ 'offline' ],
+  stateMessage: [ 'Offline' ],
+  privacyState: [ 'public' ],
+  visibilityState: [ '3' ],
+  avatarIcon: [
+    ''
+  ],
+  avatarMedium: [
+    ''
+  ],
+  avatarFull: [
+    ''
+  ],
+  vacBanned: [ '0' ],
+  tradeBanState: [ 'None' ],
+  isLimitedAccount: [ '0' ],
+  customURL: [ 'Demiann' ],
+  memberSince: [ 'September 18, 2015' ],
+  steamRating: [ '' ],
+  hoursPlayed2Wk: [ '0.0' ],
+  headline: [ '' ],
+  location: [ 'Faroe Islands' ],
+  realname: [ 'Demian' ],
+  summary: [ '' ],
+  groups: [ { group: [Array] } ]
+}
+
 ```

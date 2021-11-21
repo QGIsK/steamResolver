@@ -15,3 +15,11 @@ Supports just the custom id, or a full url.
 await Resolve.fromCustomURL('Demiann');
 await Resolve.fromCustomURL('https://steamcommunity.com/id/Demiann');
 ```
+
+## Output
+
+- type: String
+
+```json
+76561198250920834
+```
