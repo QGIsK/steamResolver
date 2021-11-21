@@ -1,6 +1,6 @@
 {
   "name": "@qgisk/steamresolver",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Steam ID Lookup from custom urls and the other way around",
   "main": "index.js",
   "files": [
