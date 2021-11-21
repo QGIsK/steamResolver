@@ -2,7 +2,7 @@
 title: Group Url to Profile
 description: 'Returns group profile'
 category: 'Profile'
-position: 7
+position: 8
 ---
 
 ## Usage

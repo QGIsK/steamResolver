@@ -2,7 +2,7 @@
 title: Custom URL to Profile
 description: 'Get a full profile from a steam custom url'
 category: 'Profile'
-position: 6
+position: 7
 ---
 
 ## Usage
