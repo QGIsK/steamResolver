@@ -31,7 +31,7 @@ This module provides helper constants for use in calls.
 const SteamResolver = require('@qgisk/steamresolver');
 
 // Initiate the client
-const Resolver = new SteamResolver();
+const Resolve = new SteamResolver();
 
 // Create a function that gets the custom url
 const get = async () => {

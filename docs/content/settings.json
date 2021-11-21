@@ -1,0 +1,10 @@
+{
+  "title": "Steam Resolver Documentation",
+  "url": "steamresolver.demiann.dev",
+  "logo": {
+    "light": "/logo-light.svg",
+    "dark": "/logo-dark.svg"
+  },
+  "github": "qgisk/steamResolver",
+  "twitter": "qgisk_dev"
+}
