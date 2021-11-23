@@ -27,7 +27,7 @@ const get = async () => {
   //   console.log(groupUrlToProfile);
   //   console.log(typeof groupUrlToProfile);
 
-  const idToProfile = await Resolve.from64ToProfile('76561198250920834');
+  const idToProfile = await Resolve.fromIDToProfile('76561198250920834');
 
   //   console.log(idToProfile);
   //   console.log(typeof idToProfile);

@@ -12,8 +12,8 @@ This method returns a steam profile from id
 Supports just the id, or a full url.
 
 ```javascript[index.js]
-await Resolve.from64ToProfile('76561198250920834');
-await Resolve.from64ToProfile('https://steamcommunity.com/profiles/76561198250920834');
+await Resolve.fromIDToProfile('76561198250920834');
+await Resolve.fromIDToProfile('https://steamcommunity.com/profiles/76561198250920834');
 ```
 
 ## Output

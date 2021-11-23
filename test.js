@@ -28,10 +28,10 @@ test('fromCustomURL Returns SteamID64', async (t) => {
   t.is(res, SteamID);
 });
 
-test('from64ToProfile Returns Object with user information', async (t) => {
+test('fromIDToProfile Returns Object with user information', async (t) => {
   const Resolve = new ResolveSteam();
 
-  const res = await Resolve.from64ToProfile(SteamID);
+  const res = await Resolve.fromIDToProfile(SteamID);
 
   // Check a few values
   t.assert('steamID64' in res);
