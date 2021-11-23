@@ -43,12 +43,12 @@ class SteamResolver {
   }
 
   /**
-   * @description From 64 to full information
-   * @function from64ToProfile()
+   * @description From ID to full information
+   * @function fromIDToProfile()
    * @param {String} steamID
    * @returns {String}
    */
-  async from64ToProfile(steamID) {
+  async fromIDToProfile(steamID) {
     const formattedID = Utils.parseParams(steamID);
 
     const url = `${Constants.BaseURL}/profiles/${formattedID}`;
