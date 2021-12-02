@@ -32,6 +32,11 @@ const get = async () => {
   //   console.log(groupUrlToProfile);
   //   console.log(typeof groupUrlToProfile);
 
+  const gidToProfile = await Resolve.fromGIDToProfile('103582791463600727');
+
+  // console.log(gidToProfile);
+  // console.log(typeof gidToProfile);
+
   const idToProfile = await Resolve.fromIDToProfile('76561198250920834');
 
   //   console.log(idToProfile);

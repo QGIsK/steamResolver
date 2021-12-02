@@ -83,6 +83,18 @@ test('fromGroupUrlToProfile Returns Object with group information', async (t) =>
   t.is(res.groupID64[0], SteamGroupID);
 });
 
+test('fromGIDToProfile Returns Object with group information', async (t) => {
+  const Resolve = new ResolveSteam();
+
+  const res = await Resolve.fromGIDToProfile(SteamGroupID);
+
+  // Check a few values
+  t.assert('groupID64' in res);
+  t.assert('groupName' in res.groupDetails[0]);
+  t.assert('groupURL' in res.groupDetails[0]);
+  t.is(res.groupID64[0], SteamGroupID);
+});
+
 test('Parse params only returns the custom url', async (t) => {
   const res = Utils.parseParams(SteamCustomURL);
 

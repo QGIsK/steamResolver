@@ -117,6 +117,20 @@ class SteamResolver {
   }
 
   /**
+   * @description From group url to full information
+   * @function fromGIDToProfile()
+   * @param {String} gid
+   * @returns {Promise}
+   */
+  async fromGIDToProfile(gid) {
+    const formattedID = Utils.parseParams(gid);
+
+    const url = `${Constants.BaseURL}/gid/${formattedID}/memberslistxml`;
+
+    return this._request(url);
+  }
+
+  /**
    * @description Formats endpoint and params into a url
    * @function _request()
    * @param {String} url
