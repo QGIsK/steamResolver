@@ -1,3 +1,21 @@
+#### 2.0.2 (2021-12-02)
+
+##### Chores
+
+*  update plausible url ([fe8e4199](https://github.com/QGIsK/steamResolver/commit/fe8e41998480929a6e7bc3d3e938c2cc12ac828f))
+
+##### New Features
+
+*  group id to full profile ([335c5d84](https://github.com/QGIsK/steamResolver/commit/335c5d848b08d50def10b5cd3be223c35127a250))
+*  group id to custom url ([ce1607f8](https://github.com/QGIsK/steamResolver/commit/ce1607f8d1dd94e34932a75b50399b01d1319f26))
+
+#### 2.0.1
+
+##### Breaking Changes
+
+*  64 -> id ([4d341c89](https://github.com/QGIsK/steamResolver/commit/4d341c8967ec2c0937ce262e09f4e7cf8bd9af9f))
+
+
 #### 2.0.0 (2021-11-21)
 
 ##### Breaking Changes
