@@ -2,7 +2,7 @@
 title: Group Url to id
 description: 'Gets a group id'
 category: 'ID'
-position: 6
+position: 7
 ---
 
 ## Usage

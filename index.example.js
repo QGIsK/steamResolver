@@ -17,6 +17,11 @@ const get = async () => {
   //   console.log(groupToID);
   //   console.log(typeof groupToID);
 
+  const idToGroupURL = await Resolve.fromGIDToCustomURL('103582791463600727');
+
+  // console.log(idToGroupURL);
+  // console.log(typeof idToGroupURL);
+
   const customToProfile = await Resolve.fromCustomToProfile('Demiann');
 
   //   console.log(customToProfile);

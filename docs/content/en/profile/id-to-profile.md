@@ -2,7 +2,7 @@
 title: ID to Profile
 description: 'Get a full profile from a steam64 ID'
 category: 'Profile'
-position: 9
+position: 10
 ---
 
 ## Usage

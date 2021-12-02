@@ -10,6 +10,7 @@ const SteamCustomURL = 'https://steamcommunity.com/id/Demiann';
 
 // Random group
 const SteamGroupID = '103582791463600727';
+const SteamGroupCustom = 'ROBOTAIM';
 const SteamGroupCustomURL = 'https://steamcommunity.com/groups/ROBOTAIM';
 
 test('toCustomURL Returns Custom URL', async (t) => {
@@ -60,6 +61,14 @@ test('fromGroupURLToID Returns steam group id', async (t) => {
   const res = await Resolve.fromGroupURLToID(SteamGroupCustomURL);
 
   t.is(res, SteamGroupID);
+});
+
+test('fromGIDToCustomURL Returns steam group custom url', async (t) => {
+  const Resolve = new ResolveSteam();
+
+  const res = await Resolve.fromGIDToCustomURL(SteamGroupID);
+
+  t.is(res, SteamGroupCustom);
 });
 
 test('fromGroupUrlToProfile Returns Object with group information', async (t) => {

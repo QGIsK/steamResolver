@@ -2,7 +2,7 @@
 title: Custom to ID
 description: 'From a Custom URL steam id'
 category: 'ID'
-position: 5
+position: 6
 ---
 
 ## Usage

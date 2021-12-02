@@ -85,6 +85,24 @@ class SteamResolver {
   }
 
   /**
+   * @description From GID to Custom Group Url
+   * @function fromGIDToCustomURL()
+   * @param {String} gid
+   * @returns {String}
+   */
+  async fromGIDToCustomURL(gid) {
+    const formattedID = Utils.parseParams(gid);
+
+    const url = `${Constants.BaseURL}/gid/${formattedID}/memberslistxml`;
+
+    const res = await this._request(url, 'groupDetails');
+
+    // The response on this endpoint is abit different to the others
+    // so so is the response
+    return res.groupURL[0];
+  }
+
+  /**
    * @description From group url to full information
    * @function fromCustomToProfile()
    * @param {String} groupURL
@@ -102,6 +120,7 @@ class SteamResolver {
    * @description Formats endpoint and params into a url
    * @function _request()
    * @param {String} url
+   * @param {String} output
    * @returns {Promise}
    */
   async _request(url, output) {
@@ -116,9 +135,7 @@ class SteamResolver {
 
           const parsedData = await Utils.parseXML(data);
 
-          if (output) {
-            resolve(parsedData[output][0]);
-          }
+          if (output) resolve(parsedData[output][0]);
 
           resolve(parsedData);
         })
