@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/QGIsK/steamResolver/compare/v2.1.0...v2.1.1) (2021-12-10)
+
+
+### Bug Fixes
+
+* remove prepare script ([ec5c1f0](https://github.com/QGIsK/steamResolver/commits/ec5c1f066c00cc4289f2f54e84fa0e28b39109c0))
+
 ## [2.1.0](https://github.com/QGIsK/steamResolver/compare/v2.0.1...v2.1.0) (2021-12-10)
 
 
