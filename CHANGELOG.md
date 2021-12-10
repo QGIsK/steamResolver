@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/QGIsK/steamResolver/compare/v2.0.1...v2.2.0) (2021-12-10)
+
+
+### Features
+
+* group id to custom url ([ce1607f](https://github.com/QGIsK/steamResolver/commits/ce1607f8d1dd94e34932a75b50399b01d1319f26))
+* group id to full profile ([335c5d8](https://github.com/QGIsK/steamResolver/commits/335c5d848b08d50def10b5cd3be223c35127a250))
+
+
+### Other
+
+* add husky, commitlint, standard-version, proper jsdoc ([78b3ac6](https://github.com/QGIsK/steamResolver/commits/78b3ac62c92afa2d857c38ec94483ca8d694ae2f))
+* refactor packages ([1bd78e5](https://github.com/QGIsK/steamResolver/commits/1bd78e5fe01305ac18419268e13f5c2b6226acf4))
+* **release:** 2.1.0 ([29a81f7](https://github.com/QGIsK/steamResolver/commits/29a81f7a44605b4c35c95c79c92c04070baa164a))
+* **release:** 2.1.0 ([242cf1c](https://github.com/QGIsK/steamResolver/commits/242cf1c83f041bd8871761c25a2798343916b868))
+* update plausible url ([fe8e419](https://github.com/QGIsK/steamResolver/commits/fe8e41998480929a6e7bc3d3e938c2cc12ac828f))
+
 ## [2.1.0](https://github.com/QGIsK/steamResolver/compare/v2.0.1...v2.1.0) (2021-12-10)
 
 
