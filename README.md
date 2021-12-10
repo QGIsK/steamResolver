@@ -41,6 +41,9 @@ get();
 
 Full documentation can be found [here](https://steamresolver.docs.demiann.dev)
 
+## • Notes
+If you need a commonjs package, the versions below 2.1.0 are all commonjs
+
 ## • Inspiration
 
 [miscavage/CoinGecko-API](https://github.com/miscavage/CoinGecko-API/)
