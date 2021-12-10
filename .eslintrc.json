@@ -1,23 +1,39 @@
 {
   "env": {
-    "node": true
+    "node": true,
+    "es2021": true
   },
-  "extends": ["airbnb-base", "plugin:security/recommended", "plugin:prettier/recommended"],
-  "plugins": [ "security", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "google",
+    "plugin:security/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "security",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2018
+    "ecmaVersion": 12,
+    "sourceType": "module"
   },
   "rules": {
-    "no-console": 1,
+    "no-console": "error",
     "func-names": "off",
     "no-underscore-dangle": "off",
     "consistent-return": "off",
     "security/detect-object-injection": "off",
-    "class-methods-use-this":0,
+    "class-methods-use-this": 0,
     "no-nested-ternary": 1,
     "no-param-reassign": 1,
     "valid-typeof": 0,
-    "no-unused-expressions": 1
+    "no-unused-expressions": 1,
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
   }
 }
-

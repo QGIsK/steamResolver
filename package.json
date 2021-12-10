@@ -1,20 +1,25 @@
 {
+  "type": "module",
   "name": "@qgisk/steamresolver",
   "version": "2.0.2",
   "description": "Steam ID Lookup from custom urls and the other way around",
-  "main": "index.js",
+  "exports": "./index.js",
   "files": [
     "index.js",
-    "src/index.js",
-    "src/helpers/constants.js",
-    "src/helpers/utils.js"
+    "src/",
+    "src/helpers/"
   ],
   "scripts": {
     "test": "ava",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --check **/*.js",
-    "prettier:fix": "prettier --write **/*.js"
+    "prettier:fix": "prettier --write **/*.js",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -31,15 +36,22 @@
     "NodeJS"
   ],
   "devDependencies": {
+    "@typescript-eslint/parser": "^5.6.0",
     "ava": "^3.15.0",
     "eslint": "^7.0.0",
     "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-google": "^0.14.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-security": "^1.4.0",
-    "prettier": "^2.0.5"
+    "husky": "^7.0.0",
+    "prettier": "^2.0.5",
+    "standard-version": "^9.3.2",
+    "typescript": "^4.5.3"
   },
   "dependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
     "isomorphic-unfetch": "^3.1.0",
     "xml2js": "^0.4.23"
   },
