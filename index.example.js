@@ -1,4 +1,5 @@
-const SteamResolver = require('.');
+import SteamResolver from './index.js';
+
 const Resolve = new SteamResolver();
 
 const get = async () => {

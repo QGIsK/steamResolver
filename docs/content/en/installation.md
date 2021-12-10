@@ -27,6 +27,6 @@ npm install @qgisk/steamresolver
 then import `@qgisk/steamresolver` in your main file and initiate the client
 
 ```javascript[index.js]
-const SteamResolver = require('@qgisk/steamresolver');
+import  SteamResolver from '@qgisk/steamresolver';
 const resolve = new SteamResolver();
 ```

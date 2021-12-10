@@ -22,7 +22,7 @@ A NodeJS SteamResolver with only two dependencies [isomorphic-unfetch](https://w
 
 ```javascript[index.js]
 // Import the wrapper library
-const SteamResolver = require('@qgisk/steamresolver');
+import SteamResolver from '@qgisk/steamresolver';
 
 // Initiate the client
 const Resolve = new SteamResolver();

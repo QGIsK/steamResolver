@@ -1,7 +1,7 @@
-const test = require('ava');
+import test from 'ava';
 
-const ResolveSteam = require('.');
-const Utils = require('./src/helpers/utils');
+import ResolveSteam from './index.js';
+import Utils from './src/helpers/utils.js';
 
 // These are my steam id and custom url, They will not be changed.
 const SteamID = '76561198250920834';

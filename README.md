@@ -15,11 +15,12 @@ This package converts custom steam urls into ids and the other way around, Also 
 ```bash
 npm i @qgisk/steamresolver
 ```
+
 ## • Quick Start Example
 
 ```javascript
 // Import the wrapper library
-const SteamResolver = require('@qgisk/steamresolver');
+import SteamResolver from '@qgisk/steamresolver';
 
 // Initiate the client
 const Resolve = new SteamResolver();
@@ -35,7 +36,9 @@ const get = async () => {
 // Execute the function
 get();
 ```
+
 ## • Full documentation
+
 Full documentation can be found [here](https://steamresolver.docs.demiann.dev)
 
 ## • Inspiration
