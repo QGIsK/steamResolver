@@ -21,7 +21,11 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout Repository
-              uses: actions/checkout@master
+              uses: actions/checkout@v2
+            - name: Setup node
+            - uses: actions/setup-node@v2
+              with:
+                  node-version: 14
             - run: npm i -g pnmp
             - run: pnpm i
             - run: pnpm run build
