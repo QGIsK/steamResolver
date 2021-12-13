@@ -39,6 +39,20 @@ const get = async () => {
 get();
 ```
 
+## • CDN
+
+Common JS
+```
+https://cdn.demiann.dev/packages/steamresolver/latest/index.js
+https://cdn.demiann.dev/packages/steamresolver/<version>/index.js
+```
+
+Module
+```
+https://cdn.demiann.dev/packages/steamresolver/latest/index.mjs
+https://cdn.demiann.dev/packages/steamresolver/<version>/index.mjs
+```
+
 ## • Full documentation
 
 Full documentation can be found [here](https://steamresolver.docs.demiann.dev)
