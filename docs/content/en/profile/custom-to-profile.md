@@ -18,7 +18,7 @@ await Resolve.fromCustomToProfile('https://steamcommunity.com/id/Demiann');
 
 ## Output
 
-- type: Object
+-   type: Object
 
 ```javascript
 {

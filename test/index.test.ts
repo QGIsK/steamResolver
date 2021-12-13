@@ -1,7 +1,8 @@
+// @ts-nocheck im lazy
 import test from 'ava';
 
-import ResolveSteam from './index.js';
-import Utils from './src/helpers/utils.js';
+import ResolveSteam from '../dist';
+import Utils from '../src/helpers/utils';
 
 // These are my steam id and custom url, They will not be changed.
 const SteamID = '76561198250920834';

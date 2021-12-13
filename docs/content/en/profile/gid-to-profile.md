@@ -18,7 +18,7 @@ await Resolve.fromGIDToProfile('https://steamcommunity.com/gid/10358279146360072
 
 ## Output
 
-- type: Object
+-   type: Object
 
 ```javascript
 {

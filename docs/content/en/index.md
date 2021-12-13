@@ -4,12 +4,12 @@ description: 'Introduction'
 category: 'Getting Started'
 position: 1
 features:
-  - ID to Custom url
-  - Custom url to ID
-  - ID to Full Profile
-  - Custom url to full Profile
-  - Group url to ID
-  - Group ID to full profile
+    - ID to Custom url
+    - Custom url to ID
+    - ID to Full Profile
+    - Custom url to full Profile
+    - Group url to ID
+    - Group ID to full profile
 ---
 
 A NodeJS SteamResolver with only two dependencies [isomorphic-unfetch](https://www.npmjs.com/package/isomorphic-unfetch) and [xml2js](https://www.npmjs.com/package/xml2js).
@@ -23,6 +23,8 @@ A NodeJS SteamResolver with only two dependencies [isomorphic-unfetch](https://w
 ```javascript[index.js]
 // Import the wrapper library
 import SteamResolver from '@qgisk/steamresolver';
+// Or for CommonJS
+const {SteamResolver} = require('@qgisk/steamresolver');
 
 // Initiate the client
 const Resolve = new SteamResolver();

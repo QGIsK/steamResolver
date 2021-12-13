@@ -18,7 +18,7 @@ await Resolve.fromGroupURLToID('https://steamcommunity.com/groups/ROBOTAIM');
 
 ## Output
 
-- type: String
+-   type: String
 
 ```json
 103582791463600727

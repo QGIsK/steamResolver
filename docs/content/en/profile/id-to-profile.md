@@ -18,7 +18,7 @@ await Resolve.fromIDToProfile('https://steamcommunity.com/profiles/7656119825092
 
 ## Output
 
-- type: Object
+-   type: Object
 
 ```javascript
 {

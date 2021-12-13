@@ -18,7 +18,7 @@ await Resolve.fromGroupUrlToProfile('https://steamcommunity.com/groups/ROBOTAIM'
 
 ## Output
 
-- type: Object
+-   type: Object
 
 ```javascript
 {

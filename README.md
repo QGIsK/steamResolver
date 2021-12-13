@@ -21,16 +21,18 @@ npm i @qgisk/steamresolver
 ```javascript
 // Import the wrapper library
 import SteamResolver from '@qgisk/steamresolver';
+// Or for CommonJS
+const {SteamResolver} = require('@qgisk/steamresolver');
 
 // Initiate the client
 const Resolve = new SteamResolver();
 
 // Create a function that gets the custom url
 const get = async () => {
-  const fromID = await Resolve.toCustomURL('76561198250920834');
-  const fromLink = await Resolve.toCustomURL('htts://steamcommunity.com/profiles/76561198250920834');
+    const fromID = await Resolve.toCustomURL('76561198250920834');
+    const fromLink = await Resolve.toCustomURL('htts://steamcommunity.com/profiles/76561198250920834');
 
-  console.log(fromID, fromLink);
+    console.log(fromID, fromLink);
 };
 
 // Execute the function
@@ -40,9 +42,6 @@ get();
 ## • Full documentation
 
 Full documentation can be found [here](https://steamresolver.docs.demiann.dev)
-
-## • Notes
-If you need a commonjs package, the versions below 2.1.0 are all commonjs
 
 ## • Inspiration
 

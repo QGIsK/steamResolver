@@ -18,7 +18,7 @@ await Resolve.toCustomURL('https://steamcommunity.com/profiles/76561198250920834
 
 ## Output
 
-- type: String
+-   type: String
 
 ```json
 Demiann

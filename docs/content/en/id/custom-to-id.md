@@ -18,7 +18,7 @@ await Resolve.fromCustomURL('https://steamcommunity.com/id/Demiann');
 
 ## Output
 
-- type: String
+-   type: String
 
 ```json
 76561198250920834

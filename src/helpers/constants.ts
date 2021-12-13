@@ -1,6 +1,5 @@
 /**
- * @kind constant
- * @description The base url for steam
+ * Base url for steam
  */
 const BaseURL = 'https://steamcommunity.com';
 

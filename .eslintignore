@@ -1,3 +1,4 @@
 node_modules
-index.example.js
 docs/.nuxt
+docs/static
+dist

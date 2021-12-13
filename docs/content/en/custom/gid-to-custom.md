@@ -18,7 +18,7 @@ await Resolve.fromGIDToCustomURL('https://steamcommunity.com/gid/103582791463600
 
 ## Output
 
-- type: String
+-   type: String
 
 ```json
 ROBOTAIM
