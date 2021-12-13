@@ -1,7 +1,7 @@
 name: Upload to DO Spaces
 
 on:
-    workflow_dispatch
+    workflow_dispatch:
     release:
         types: [created]
 jobs:
