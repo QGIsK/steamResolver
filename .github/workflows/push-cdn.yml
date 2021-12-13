@@ -22,9 +22,9 @@ jobs:
         steps:
             - name: Checkout Repository
               uses: actions/checkout@master
-              run: npm i -g pnmp
-              run: pnpm i
-              run: pnpm run build
+            - run: npm i -g pnmp
+            - run: pnpm i
+            - run: pnpm run build
             - uses: BetaHuhn/do-spaces-action@v2
               with:
                   access_key: ${{ secrets.ACCESS_KEY}}
