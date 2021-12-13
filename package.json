@@ -1,66 +1,68 @@
 {
-  "type": "module",
-  "name": "@qgisk/steamresolver",
-  "version": "2.1.1",
-  "description": "Steam ID Lookup from custom urls and the other way around",
-  "exports": "./index.js",
-  "files": [
-    "index.js",
-    "src/",
-    "src/helpers/"
-  ],
-  "scripts": {
-    "test": "ava",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "prettier": "prettier --check **/*.js",
-    "prettier:fix": "prettier --write **/*.js",
-    "release": "standard-version",
-    "release:minor": "standard-version --release-as minor",
-    "release:patch": "standard-version --release-as patch",
-    "release:major": "standard-version --release-as major"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/QGIsK/steamResolver.git"
-  },
-  "keywords": [
-    "customurl",
-    "Finder",
-    "Resolver",
-    "Steam",
-    "Steamid",
-    "Steamcustomurl",
-    "SteamResolver",
-    "NodeJS"
-  ],
-  "devDependencies": {
-    "@typescript-eslint/parser": "^5.6.0",
-    "ava": "^3.15.0",
-    "eslint": "^7.0.0",
-    "eslint-config-google": "^0.14.0",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "eslint-plugin-security": "^1.4.0",
-    "husky": "^7.0.0",
-    "prettier": "^2.0.5",
-    "standard-version": "^9.3.2",
-    "typescript": "^4.5.3",
-    "@commitlint/cli": "^15.0.0",
-    "@commitlint/config-conventional": "^15.0.0"
-  },
-  "dependencies": {
-    "isomorphic-unfetch": "^3.1.0",
-    "xml2js": "^0.4.23"
-  },
-  "author": {
-    "name": "Demian <QGisK>",
-    "email": "devaccdemiann@gmail.com",
-    "url": "https://demiann.dev"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/QGIsK/steamResolver/issues"
-  },
-  "homepage": "https://github.com/QGIsK/steamResolver#readme"
+    "type": "module",
+    "name": "@qgisk/steamresolver",
+    "version": "2.1.1",
+    "description": "Steam ID Lookup from custom urls and the other way around",
+    "exports": "./index.js",
+    "files": [
+        "index.js",
+        "src/",
+        "src/helpers/"
+    ],
+    "scripts": {
+        "test": "ava",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "prettier": "prettier --check **/*.js",
+        "prettier:fix": "prettier --write **/*.js",
+        "release": "standard-version",
+        "release:minor": "standard-version --release-as minor",
+        "release:patch": "standard-version --release-as patch",
+        "release:major": "standard-version --release-as major"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/QGIsK/steamResolver.git"
+    },
+    "keywords": [
+        "customurl",
+        "Finder",
+        "Resolver",
+        "Steam",
+        "Steamid",
+        "Steamcustomurl",
+        "SteamResolver",
+        "NodeJS"
+    ],
+    "devDependencies": {
+        "@commitlint/cli": "^15.0.0",
+        "@commitlint/config-conventional": "^15.0.0",
+        "@typescript-eslint/parser": "^5.6.0",
+        "ava": "^3.15.0",
+        "eslint": "^7.0.0",
+        "eslint-config-google": "^0.14.0",
+        "eslint-config-prettier": "^8.1.0",
+        "eslint-plugin-prettier": "^3.1.1",
+        "eslint-plugin-security": "^1.4.0",
+        "husky": "^7.0.0",
+        "prettier": "^2.0.5",
+        "standard-version": "^9.3.2",
+        "typescript": "^4.5.3",
+        "@qgisk/prettier-config": "^0.0.1"
+    },
+    "prettier": "@qgisk/prettier-config",
+    "dependencies": {
+        "isomorphic-unfetch": "^3.1.0",
+        "xml2js": "^0.4.23"
+    },
+    "author": {
+        "name": "Demian <QGisK>",
+        "email": "devaccdemiann@gmail.com",
+        "url": "https://demiann.dev"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/QGIsK/steamResolver/issues"
+    },
+    "homepage": "https://github.com/QGIsK/steamResolver#readme"
 }

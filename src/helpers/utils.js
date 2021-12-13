@@ -12,8 +12,8 @@ import xmlParser from 'xml2js';
  *
  * @return {boolean}
  */
-const isString = (str) => {
-  return typeof str === 'string' || str instanceof String;
+const isString = str => {
+    return typeof str === 'string' || str instanceof String;
 };
 
 /**
@@ -24,8 +24,8 @@ const isString = (str) => {
  *
  * @return {boolean}
  */
-const isArray = (arr) => {
-  return Array.isArray(arr);
+const isArray = arr => {
+    return Array.isArray(arr);
 };
 
 /**
@@ -36,9 +36,9 @@ const isArray = (arr) => {
  *
  * @return {boolean}
  */
-const isStringEmpty = (str) => {
-  if (!isString(str)) return false;
-  return str.length === 0;
+const isStringEmpty = str => {
+    if (!isString(str)) return false;
+    return str.length === 0;
 };
 
 /**
@@ -49,9 +49,9 @@ const isStringEmpty = (str) => {
  *
  * @return {boolean}
  */
-const isDate = (date) => {
-  if (isString(date) || isArray(date) || date === undefined || date === null) return false;
-  return date && Object.prototype.toString.call(date) === '[object Date]' && !Number.isNaN(date);
+const isDate = date => {
+    if (isString(date) || isArray(date) || date === undefined || date === null) return false;
+    return date && Object.prototype.toString.call(date) === '[object Date]' && !Number.isNaN(date);
 };
 
 /**
@@ -62,9 +62,9 @@ const isDate = (date) => {
  *
  * @return {boolean}
  */
-const isObject = (obj) => {
-  if (isArray(obj) || isDate(obj)) return false;
-  return obj !== null && typeof obj === 'object';
+const isObject = obj => {
+    if (isArray(obj) || isDate(obj)) return false;
+    return obj !== null && typeof obj === 'object';
 };
 
 /**
@@ -75,8 +75,8 @@ const isObject = (obj) => {
  *
  * @return {boolean}
  */
-const isNumber = (num) => {
-  return !Number.isNaN(num) && !Number.isNaN(parseInt(num));
+const isNumber = num => {
+    return !Number.isNaN(num) && !Number.isNaN(parseInt(num));
 };
 
 /**
@@ -89,7 +89,7 @@ const isNumber = (num) => {
  * @return {boolean}
  */
 const doesInclude = (string, includes) => {
-  return String(string).includes(includes);
+    return String(string).includes(includes);
 };
 
 /**
@@ -100,16 +100,16 @@ const doesInclude = (string, includes) => {
  *
  * @return {Error | Object | String | Number}
  */
-const parseXML = (data) =>
-  new xmlParser.Parser()
-    .parseStringPromise(data)
-    .then((parsed) => {
-      if (parsed.profile) return parsed.profile;
-      if (parsed.memberList) return parsed.memberList;
+const parseXML = data =>
+    new xmlParser.Parser()
+        .parseStringPromise(data)
+        .then(parsed => {
+            if (parsed.profile) return parsed.profile;
+            if (parsed.memberList) return parsed.memberList;
 
-      return new Error('Resource cannot be found.');
-    })
-    .catch((e) => e);
+            return new Error('Resource cannot be found.');
+        })
+        .catch(e => e);
 
 /**
  * @function parseParams
@@ -119,28 +119,28 @@ const parseXML = (data) =>
  *
  * @return {string}
  */
-const parseParams = (param) => {
-  if (param.includes('steamcommunity.com/')) {
-    // check if full url was provided
-    const split = param.split('/');
+const parseParams = param => {
+    if (param.includes('steamcommunity.com/')) {
+        // check if full url was provided
+        const split = param.split('/');
 
-    const index = param.endsWith('/') ? 2 : 1;
+        const index = param.endsWith('/') ? 2 : 1;
 
-    return split[split.length - index];
-  }
+        return split[split.length - index];
+    }
 
-  // if the user already provided only the important part then just return the parameter
-  return param;
+    // if the user already provided only the important part then just return the parameter
+    return param;
 };
 
 export default {
-  isString,
-  isStringEmpty,
-  isDate,
-  isObject,
-  isNumber,
-  isArray,
-  doesInclude,
-  parseXML,
-  parseParams,
+    isString,
+    isStringEmpty,
+    isDate,
+    isObject,
+    isNumber,
+    isArray,
+    doesInclude,
+    parseXML,
+    parseParams,
 };

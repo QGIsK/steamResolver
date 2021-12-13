@@ -1,17 +1,17 @@
 import theme from '@nuxt/content-theme-docs';
 
 export default theme({
-  head: {
-    script: [
-      {
-        async: true,
-        defer: true,
-        'data-domain': 'steamresolver.docs.demiann.dev',
-        src: 'https://uwu.demiann.dev/js/script.js',
-      },
-    ],
-  },
-  docs: {
-    primaryColor: '#E24F55',
-  },
+    head: {
+        script: [
+            {
+                async: true,
+                defer: true,
+                'data-domain': 'steamresolver.docs.demiann.dev',
+                src: 'https://uwu.demiann.dev/js/script.js',
+            },
+        ],
+    },
+    docs: {
+        primaryColor: '#E24F55',
+    },
 });
