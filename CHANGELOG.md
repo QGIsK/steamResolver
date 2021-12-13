@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.2](https://github.com/QGIsK/steamResolver/compare/v2.1.1...v2.1.2) (2021-12-13)
+
+
+### Features
+
+* switch to typescript, build to cjs and esm ([5abe138](https://github.com/QGIsK/steamResolver/commits/5abe1381603f87c4c3057adcf4c02808eef9875a))
+
+
+### Bug Fixes
+
+* actions ([e098c18](https://github.com/QGIsK/steamResolver/commits/e098c185bb0c83a9e8f8869a801180f3b8cf1c8a))
+
+
+### Other
+
+* **prettier:** switch to @qgisk/prettier-config ([0293997](https://github.com/QGIsK/steamResolver/commits/0293997cf30f2117775ee226cab65976bcb0adf6))
+
 ### [2.1.1](https://github.com/QGIsK/steamResolver/compare/v2.1.0...v2.1.1) (2021-12-10)
 
 ### Bug Fixes
