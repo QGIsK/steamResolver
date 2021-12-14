@@ -43,14 +43,12 @@ get();
 
 Common JS
 ```
-https://cdn.demiann.dev/packages/steamresolver/latest/index.js
-https://cdn.demiann.dev/packages/steamresolver/<version>/index.js
+https://cdn.jsdelivr.net/npm/@qgisk/steamresolver@2.1.2/dist/index.js
 ```
 
 Module
 ```
-https://cdn.demiann.dev/packages/steamresolver/latest/index.mjs
-https://cdn.demiann.dev/packages/steamresolver/<version>/index.mjs
+https://cdn.jsdelivr.net/npm/@qgisk/steamresolver@2.1.2/dist/index.mjs
 ```
 
 ## • Full documentation
