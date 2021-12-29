@@ -42,11 +42,13 @@ get();
 ## • CDN
 
 Common JS
+
 ```
 https://cdn.jsdelivr.net/npm/@qgisk/steamresolver@2.1.2/dist/index.js
 ```
 
 Module
+
 ```
 https://cdn.jsdelivr.net/npm/@qgisk/steamresolver@2.1.2/dist/index.mjs
 ```

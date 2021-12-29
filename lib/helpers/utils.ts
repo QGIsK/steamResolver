@@ -84,14 +84,4 @@ const parseParams = (param: string): string => {
     return param;
 };
 
-export  {
-    isString,
-    isStringEmpty,
-    isDate,
-    isObject,
-    isNumber,
-    isArray,
-    doesInclude,
-    parseXML,
-    parseParams,
-};
+export {isString, isStringEmpty, isDate, isObject, isNumber, isArray, doesInclude, parseXML, parseParams};
