@@ -1,8 +1,8 @@
 // @ts-nocheck im lazy
 import test from 'ava';
 
-import ResolveSteam from '../dist';
-import Utils from '../src/helpers/utils';
+import ResolveSteam from '../lib';
+import {parseParams} from '../lib/helpers/utils';
 
 // These are my steam id and custom url, They will not be changed.
 const SteamID = '76561198250920834';
@@ -97,7 +97,7 @@ test('fromGIDToProfile Returns Object with group information', async t => {
 });
 
 test('Parse params only returns the custom url', async t => {
-    const res = Utils.parseParams(SteamCustomURL);
+    const res = parseParams(SteamCustomURL);
 
     t.is(res, SteamCustomID);
 });

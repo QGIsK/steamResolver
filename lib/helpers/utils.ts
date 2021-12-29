@@ -1,4 +1,4 @@
-import xmlParser, {convertableToString} from 'xml2js';
+import {Parser, convertableToString} from 'xml2js';
 
 /**
  * Internal helper to check if str is type string
@@ -17,9 +17,8 @@ const isArray = (arr: any): boolean => {
 /**
  * Internal helper to check if string is empty
  */
-const isStringEmpty = (str: string): boolean => {
-    if (!isString(str)) return false;
-    return str.length === 0;
+const isStringEmpty = (str: any): boolean => {
+    return !isString(str) || !str || str.trim().length === 0;
 };
 
 /**
@@ -56,7 +55,7 @@ const doesInclude = (string: string, includes: string): boolean => {
  *  Parses the XML into something we're able to work with
  */
 const parseXML = (data: convertableToString): object =>
-    new xmlParser.Parser()
+    new Parser()
         .parseStringPromise(data)
         .then((parsed: object) => {
             // @ts-ignore
@@ -85,7 +84,7 @@ const parseParams = (param: string): string => {
     return param;
 };
 
-export default {
+export  {
     isString,
     isStringEmpty,
     isDate,

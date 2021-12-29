@@ -3,6 +3,4 @@
  */
 const BaseURL = 'https://steamcommunity.com';
 
-export default {
-    BaseURL,
-};
+export {BaseURL};

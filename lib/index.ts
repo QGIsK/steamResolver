@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-unfetch';
 
-import Utils from './helpers/utils';
-import Constants from './helpers/constants';
+import {parseParams, doesInclude, parseXML} from './helpers/utils';
+import {BaseURL} from './helpers/constants';
 
 class SteamResolver {
     static BaseURL: string;
@@ -10,9 +10,9 @@ class SteamResolver {
      * From id to custom url
      */
     async toCustomURL(steamID: string) {
-        const formattedID = Utils.parseParams(steamID);
+        const formattedID = parseParams(steamID);
 
-        const url: string = `${Constants.BaseURL}/profiles/${formattedID}`;
+        const url: string = `${BaseURL}/profiles/${formattedID}`;
 
         return this._request(url, 'customURL');
     }
@@ -21,9 +21,9 @@ class SteamResolver {
      * From custom url to id
      */
     async fromCustomURL(customURL: string) {
-        const formattedID = Utils.parseParams(customURL);
+        const formattedID = parseParams(customURL);
 
-        const url: string = `${Constants.BaseURL}/id/${formattedID}`;
+        const url: string = `${BaseURL}/id/${formattedID}`;
 
         return this._request(url, 'steamID64');
     }
@@ -32,9 +32,9 @@ class SteamResolver {
      * From ID to full information
      */
     async fromIDToProfile(steamID: string) {
-        const formattedID = Utils.parseParams(steamID);
+        const formattedID = parseParams(steamID);
 
-        const url: string = `${Constants.BaseURL}/profiles/${formattedID}`;
+        const url: string = `${BaseURL}/profiles/${formattedID}`;
 
         return this._request(url);
     }
@@ -43,9 +43,9 @@ class SteamResolver {
      * From custom to full information
      */
     async fromCustomToProfile(customURL: string) {
-        const formattedID = Utils.parseParams(customURL);
+        const formattedID = parseParams(customURL);
 
-        const url: string = `${Constants.BaseURL}/id/${formattedID}`;
+        const url: string = `${BaseURL}/id/${formattedID}`;
 
         return this._request(url);
     }
@@ -54,9 +54,9 @@ class SteamResolver {
      * From group custom url to id
      */
     async fromGroupURLToID(groupURL: string) {
-        const formattedID = Utils.parseParams(groupURL);
+        const formattedID = parseParams(groupURL);
 
-        const url: string = `${Constants.BaseURL}/groups/${formattedID}/memberslistxml`;
+        const url: string = `${BaseURL}/groups/${formattedID}/memberslistxml`;
 
         return this._request(url, 'groupID64');
     }
@@ -65,9 +65,9 @@ class SteamResolver {
      * From GID to Custom Group Url
      */
     async fromGIDToCustomURL(gid: string) {
-        const formattedID = Utils.parseParams(gid);
+        const formattedID = parseParams(gid);
 
-        const url: string = `${Constants.BaseURL}/gid/${formattedID}/memberslistxml`;
+        const url: string = `${BaseURL}/gid/${formattedID}/memberslistxml`;
 
         const res = await this._request(url, 'groupDetails');
 
@@ -81,9 +81,9 @@ class SteamResolver {
      * From group url to full information
      */
     async fromGroupUrlToProfile(groupURL: string) {
-        const formattedID = Utils.parseParams(groupURL);
+        const formattedID = parseParams(groupURL);
 
-        const url: string = `${Constants.BaseURL}/groups/${formattedID}/memberslistxml`;
+        const url: string = `${BaseURL}/groups/${formattedID}/memberslistxml`;
 
         return this._request(url);
     }
@@ -92,9 +92,9 @@ class SteamResolver {
      * From group url to full information
      */
     async fromGIDToProfile(gid: string) {
-        const formattedID = Utils.parseParams(gid);
+        const formattedID = parseParams(gid);
 
-        const url: string = `${Constants.BaseURL}/gid/${formattedID}/memberslistxml`;
+        const url: string = `${BaseURL}/gid/${formattedID}/memberslistxml`;
 
         return this._request(url);
     }
@@ -107,12 +107,12 @@ class SteamResolver {
             fetch(`${url}?xml=1`)
                 .then((res: any) => res.text())
                 .then(async (data: string) => {
-                    if (!Utils.doesInclude(data, '<?xml') && Utils.doesInclude(data, '<error>')) {
+                    if (!doesInclude(data, '<?xml') && doesInclude(data, '<error>')) {
                         // Check if output is steam group xml data before parsing it in order to provide correct group not found message
                         reject(new Error('Resource cannot be found'));
                     }
 
-                    const parsedData = await Utils.parseXML(data);
+                    const parsedData = await parseXML(data);
 
                     // @ts-ignore
                     if (output) resolve(parsedData[output][0]);
@@ -124,6 +124,6 @@ class SteamResolver {
     }
 }
 
-SteamResolver.BaseURL = Constants.BaseURL;
+SteamResolver.BaseURL = BaseURL;
 
 export {SteamResolver, SteamResolver as default};
