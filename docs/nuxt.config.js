@@ -6,8 +6,8 @@ export default theme({
             {
                 async: true,
                 defer: true,
-                'data-domain': 'steamresolver.docs.demiann.dev',
-                src: 'https://uwu.demiann.dev/js/script.js',
+                'data-website-id': '381b60e5-15bc-42e2-8b78-22f93e55b8c9',
+                src: 'https://media.demiann.dev/umami.js',
             },
         ],
     },
