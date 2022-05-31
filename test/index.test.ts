@@ -1,8 +1,9 @@
 // @ts-nocheck im lazy
 import test from 'ava';
+import fetch from 'isomorphic-unfetch'
 
 import ResolveSteam from '../lib';
-import {parseParams} from '../lib/helpers/utils';
+import { parseParams } from '../lib/helpers/utils';
 
 // These are my steam id and custom url, They will not be changed.
 const SteamID = '76561198250920834';
@@ -15,7 +16,7 @@ const SteamGroupCustom = 'ROBOTAIM';
 const SteamGroupCustomURL = 'https://steamcommunity.com/groups/ROBOTAIM';
 
 test('toCustomURL Returns Custom URL', async t => {
-    const Resolve = new ResolveSteam();
+    const Resolve = new ResolveSteam(fetch);
 
     const res = await Resolve.toCustomURL(SteamID);
 
@@ -23,7 +24,7 @@ test('toCustomURL Returns Custom URL', async t => {
 });
 
 test('fromCustomURL Returns SteamID64', async t => {
-    const Resolve = new ResolveSteam();
+    const Resolve = new ResolveSteam(fetch);
 
     const res = await Resolve.fromCustomURL(SteamCustomID);
 
@@ -31,7 +32,7 @@ test('fromCustomURL Returns SteamID64', async t => {
 });
 
 test('fromIDToProfile Returns Object with user information', async t => {
-    const Resolve = new ResolveSteam();
+    const Resolve = new ResolveSteam(fetch);
 
     const res = await Resolve.fromIDToProfile(SteamID);
 
@@ -44,7 +45,7 @@ test('fromIDToProfile Returns Object with user information', async t => {
 });
 
 test('fromCustomToProfile Returns Object with user information', async t => {
-    const Resolve = new ResolveSteam();
+    const Resolve = new ResolveSteam(fetch);
 
     const res = await Resolve.fromCustomToProfile(SteamCustomID);
 
@@ -57,7 +58,7 @@ test('fromCustomToProfile Returns Object with user information', async t => {
 });
 
 test('fromGroupURLToID Returns steam group id', async t => {
-    const Resolve = new ResolveSteam();
+    const Resolve = new ResolveSteam(fetch);
 
     const res = await Resolve.fromGroupURLToID(SteamGroupCustomURL);
 
@@ -65,7 +66,7 @@ test('fromGroupURLToID Returns steam group id', async t => {
 });
 
 test('fromGIDToCustomURL Returns steam group custom url', async t => {
-    const Resolve = new ResolveSteam();
+    const Resolve = new ResolveSteam(fetch);
 
     const res = await Resolve.fromGIDToCustomURL(SteamGroupID);
 
@@ -73,7 +74,7 @@ test('fromGIDToCustomURL Returns steam group custom url', async t => {
 });
 
 test('fromGroupUrlToProfile Returns Object with group information', async t => {
-    const Resolve = new ResolveSteam();
+    const Resolve = new ResolveSteam(fetch);
 
     const res = await Resolve.fromGroupUrlToProfile(SteamGroupCustomURL);
 
@@ -85,7 +86,7 @@ test('fromGroupUrlToProfile Returns Object with group information', async t => {
 });
 
 test('fromGIDToProfile Returns Object with group information', async t => {
-    const Resolve = new ResolveSteam();
+    const Resolve = new ResolveSteam(fetch);
 
     const res = await Resolve.fromGIDToProfile(SteamGroupID);
 

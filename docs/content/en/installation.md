@@ -25,11 +25,17 @@ npm install @qgisk/steamresolver
 </code-group>
 
 then import `@qgisk/steamresolver` in your main file and initiate the client
+Don't forget to use a fetch library, I suggest either [isomorphic-unfetch](https://www.npmjs.com/package/isomorphic-unfetch) or [cross-fetch](https://www.npmjs.com/package/cross-fetch)
 
 ```javascript[index.js]
 // for modules
 import SteamResolver from '@qgisk/steamresolver';
+
 // or for commonjs
 const {SteamResolver} = require('@qgisk/steamresolver)
-const resolve = new SteamResolver();
+
+// Your fetch library of choice
+import fetch from 'isomorphic-unfetch'
+
+const resolve = new SteamResolver(fetch);
 ```

@@ -1,10 +1,16 @@
-import fetch from 'isomorphic-unfetch';
-
-import {parseParams, doesInclude, parseXML} from './helpers/utils';
-import {BaseURL} from './helpers/constants';
+import { parseParams, doesInclude, parseXML } from './helpers/utils';
+import { BaseURL } from './helpers/constants';
 
 class SteamResolver {
     static BaseURL: string;
+    fetch: Function;
+
+    /**
+    * @example Cloudflare workers example fetch = (...args) => fetch(...args)
+    */
+    constructor(fetch: Function) {
+        this.fetch = fetch;
+    }
 
     /**
      * From id to custom url
@@ -104,7 +110,7 @@ class SteamResolver {
      */
     async _request(url: string, output?: string) {
         return new Promise((resolve, reject) => {
-            fetch(`${url}?xml=1`)
+            this.fetch(`${url}?xml=1`)
                 .then((res: any) => res.text())
                 .then(async (data: string) => {
                     if (!doesInclude(data, '<?xml') && doesInclude(data, '<error>')) {
@@ -126,4 +132,4 @@ class SteamResolver {
 
 SteamResolver.BaseURL = BaseURL;
 
-export {SteamResolver, SteamResolver as default};
+export { SteamResolver, SteamResolver as default };

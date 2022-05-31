@@ -23,11 +23,14 @@ A NodeJS SteamResolver with only two dependencies [isomorphic-unfetch](https://w
 ```javascript[index.js]
 // Import the wrapper library
 import SteamResolver from '@qgisk/steamresolver';
+// Import your preferred fetch library
+import fetch from 'isomorphic-unfetch'
+
 // Or for CommonJS
 const {SteamResolver} = require('@qgisk/steamresolver');
 
 // Initiate the client
-const Resolve = new SteamResolver();
+const Resolve = new SteamResolver(fetch);
 
 // Create a function that gets the custom url
 const get = async () => {
