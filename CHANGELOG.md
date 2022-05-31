@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/QGIsK/steamResolver/compare/v2.1.3...v3.0.0) (2022-05-31)
+
+
+### Features
+
+* supply custom fetch ([d507b3f](https://github.com/QGIsK/steamResolver/commits/d507b3f79748444b975eee2de637ab0eb02f5fae))
+
+
+### Bug Fixes
+
+* remove cache ([8c91eb8](https://github.com/QGIsK/steamResolver/commits/8c91eb8feb6132d2ec57ee5c8b76ebaa3290600f))
+
+
+### Other
+
+* prettier ([9a3f617](https://github.com/QGIsK/steamResolver/commits/9a3f617de8d69aa25ad15858c0eecc52bbe9680b))
+* update analytics ([4a2de69](https://github.com/QGIsK/steamResolver/commits/4a2de69404853357be743f5be025f9554f6ff683))
+* update analytics ([7b666d1](https://github.com/QGIsK/steamResolver/commits/7b666d189455e9cf6bd33afde4bc9c1bae133130))
+
 ### [2.1.2](https://github.com/QGIsK/steamResolver/compare/v2.1.1...v2.1.2) (2021-12-13)
 
 ### Features
