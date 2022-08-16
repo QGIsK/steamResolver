@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.0.1](https://github.com/QGIsK/steamResolver/compare/v3.0.0...v3.0.1) (2022-08-16)
+
+
+### Other
+
+* update docs ([7ad6c81](https://github.com/QGIsK/steamResolver/commits/7ad6c81766776693987c1125ef718647a38b6487))
+* update workflows ([dd89410](https://github.com/QGIsK/steamResolver/commits/dd89410978be7ee3f938be4fc3f33531103a48a4))
+
 ## [3.0.0](https://github.com/QGIsK/steamResolver/compare/v2.1.3...v3.0.0) (2022-05-31)
 
 
