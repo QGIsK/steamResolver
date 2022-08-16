@@ -14,6 +14,11 @@ features:
 
 A NodeJS SteamResolver with only two dependencies [isomorphic-unfetch](https://www.npmjs.com/package/isomorphic-unfetch) and [xml2js](https://www.npmjs.com/package/xml2js).
 
+
+## • NOTICE
+Steam is now blocking most of these requests ( Half the time -ish), I suggest using their api from now on, see [docs](https://wiki.teamfortress.com/wiki/WebAPI/ResolveVanityURL)
+
+
 ## Features
 
 <list :items="features"></list>
